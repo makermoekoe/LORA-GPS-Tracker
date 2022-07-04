@@ -46,7 +46,7 @@ GPIO40 | GPS_PPS | Input
 GPIO41 | GPS_RXD | Input
 GPIO42 | GPS_TXD | Output
 
-By switching off the EN_LDO2 output, the second LDO which powers the GPS as well as LORA module, the on board LED and the OLED display, will be shut down.
+By switching off the EN_LDO2 output, the second LDO which powers the GPS as well as LORA module, the onboard LED and the OLED display, will be shut down.
 
 ## Power measurements
 
@@ -57,3 +57,5 @@ State | Avg. current | Peak current
 Reading sensors | 80mA | 92mA
 Transmitting LORA | 135mA | 208mA
 Deep sleep | 75µA | 82µA
+
+Note: The schematics in this repo have the I2C pull-up resistors connected to +3V3. It reduces the power consumption if you don't mount these resistors or if you connect them to VDD (controllable via LDO2).
